@@ -1,0 +1,443 @@
+[
+ {
+  "id": "d1",
+  "split": "dev",
+  "question": "How many days of annual leave do I get?",
+  "expected": "4",
+  "kind": "direct"
+ },
+ {
+  "id": "d2",
+  "split": "dev",
+  "question": "How long is my probation?",
+  "expected": "14",
+  "kind": "direct"
+ },
+ {
+  "id": "d3",
+  "split": "dev",
+  "question": "What is the daily allowance for a business trip to Germany?",
+  "expected": "26",
+  "kind": "direct"
+ },
+ {
+  "id": "d4",
+  "split": "dev",
+  "question": "Who do I report harassment to?",
+  "expected": "36",
+  "kind": "direct"
+ },
+ {
+  "id": "d5",
+  "split": "dev",
+  "question": "How much notice do I give if I resign after 3 years?",
+  "expected": "15",
+  "kind": "direct"
+ },
+ {
+  "id": "d6",
+  "split": "dev",
+  "question": "Do I need a doctor's note if I am sick for two days?",
+  "expected": "7",
+  "kind": "direct"
+ },
+ {
+  "id": "d7",
+  "split": "dev",
+  "question": "How much is overtime paid on a Sunday?",
+  "expected": "18",
+  "kind": "direct"
+ },
+ {
+  "id": "d8",
+  "split": "dev",
+  "question": "Can I work from home?",
+  "expected": "20",
+  "kind": "direct"
+ },
+ {
+  "id": "d9",
+  "split": "dev",
+  "question": "How much is the home office allowance?",
+  "expected": "21",
+  "kind": "direct"
+ },
+ {
+  "id": "d10",
+  "split": "dev",
+  "question": "How long do I have to submit an expense claim?",
+  "expected": "27",
+  "kind": "direct"
+ },
+ {
+  "id": "d11",
+  "split": "dev",
+  "question": "How many days off do new fathers get?",
+  "expected": "11",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d12",
+  "split": "dev",
+  "question": "When is salary paid?",
+  "expected": "29",
+  "kind": "direct"
+ },
+ {
+  "id": "d13",
+  "split": "dev",
+  "question": "Who gets a company mobile phone?",
+  "expected": "23",
+  "kind": "direct"
+ },
+ {
+  "id": "d14",
+  "split": "dev",
+  "question": "How many leave days can I carry over to next year?",
+  "expected": "6",
+  "kind": "direct"
+ },
+ {
+  "id": "d15",
+  "split": "dev",
+  "question": "What is the maximum hotel price per night in the EU?",
+  "expected": "25",
+  "kind": "direct"
+ },
+ {
+  "id": "d16",
+  "split": "dev",
+  "question": "What password length is required?",
+  "expected": "34",
+  "kind": "direct"
+ },
+ {
+  "id": "d17",
+  "split": "dev",
+  "question": "What happens if I lose my laptop?",
+  "expected": "22",
+  "kind": "direct"
+ },
+ {
+  "id": "d18",
+  "split": "dev",
+  "question": "How much is the referral bonus?",
+  "expected": "44",
+  "kind": "direct"
+ },
+ {
+  "id": "d19",
+  "split": "dev",
+  "question": "How many days off when my father dies?",
+  "expected": "12",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d20",
+  "split": "dev",
+  "question": "Can I get a salary advance?",
+  "expected": "30",
+  "kind": "direct"
+ },
+ {
+  "id": "d21",
+  "split": "dev",
+  "question": "hw many holliday days do i get",
+  "expected": "4",
+  "kind": "typo"
+ },
+ {
+  "id": "d22",
+  "split": "dev",
+  "question": "probbation period lenght",
+  "expected": "14",
+  "kind": "typo"
+ },
+ {
+  "id": "d23",
+  "split": "dev",
+  "question": "What do I get paid if I stay home ill?",
+  "expected": "8",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d24",
+  "split": "dev",
+  "question": "How do I tell the company that customer data was leaked?",
+  "expected": "33",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d25",
+  "split": "dev",
+  "question": "Can the warehouse refuse my vacation in December?",
+  "expected": "5",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d26",
+  "split": "dev",
+  "question": "Who pays for my steel toe boots?",
+  "expected": "39",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d27",
+  "split": "dev",
+  "question": "What is the severance if my role is made redundant?",
+  "expected": "16",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d28",
+  "split": "dev",
+  "question": "Is there a night shift premium?",
+  "expected": "19",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "d29",
+  "split": "dev",
+  "question": "What is the company pension plan contribution?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d30",
+  "split": "dev",
+  "question": "Do we get free lunch in the canteen?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d31",
+  "split": "dev",
+  "question": "Can I bring my dog to the office?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d32",
+  "split": "dev",
+  "question": "What is the parking policy at the Tirana office?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d33",
+  "split": "dev",
+  "question": "How much is the health insurance cover for family members?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d34",
+  "split": "dev",
+  "question": "Does the company offer stock options?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d35",
+  "split": "dev",
+  "question": "What is the managing director's salary?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "d36",
+  "split": "dev",
+  "question": "Is there a gym membership benefit?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t1",
+  "split": "test",
+  "question": "How many vacation days do I get after ten years?",
+  "expected": "4",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t2",
+  "split": "test",
+  "question": "How early must I call in when I am sick?",
+  "expected": "7",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t3",
+  "split": "test",
+  "question": "What is the notice period for a manager who wants to quit?",
+  "expected": "15",
+  "kind": "direct"
+ },
+ {
+  "id": "t4",
+  "split": "test",
+  "question": "How much per diem for a one night trip inside Albania?",
+  "expected": "26",
+  "kind": "direct"
+ },
+ {
+  "id": "t5",
+  "split": "test",
+  "question": "What time do early shift workers start?",
+  "expected": "2",
+  "kind": "direct"
+ },
+ {
+  "id": "t6",
+  "split": "test",
+  "question": "Can I claim a taxi receipt a month later?",
+  "expected": "27",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t7",
+  "split": "test",
+  "question": "How long is maternity leave?",
+  "expected": "10",
+  "kind": "direct"
+ },
+ {
+  "id": "t8",
+  "split": "test",
+  "question": "Is there a limit on lifting heavy boxes?",
+  "expected": "39",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t9",
+  "split": "test",
+  "question": "What is the gift limit from a supplier?",
+  "expected": "42",
+  "kind": "direct"
+ },
+ {
+  "id": "t10",
+  "split": "test",
+  "question": "How do I report fraud anonymously?",
+  "expected": "37",
+  "kind": "direct"
+ },
+ {
+  "id": "t11",
+  "split": "test",
+  "question": "Who do I call after an accident at work?",
+  "expected": "40",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t12",
+  "split": "test",
+  "question": "What is the maximum overtime per year?",
+  "expected": "18",
+  "kind": "direct"
+ },
+ {
+  "id": "t13",
+  "split": "test",
+  "question": "can i work frm home",
+  "expected": "20",
+  "kind": "typo"
+ },
+ {
+  "id": "t14",
+  "split": "test",
+  "question": "how long is paternty leave",
+  "expected": "11",
+  "kind": "typo"
+ },
+ {
+  "id": "t15",
+  "split": "test",
+  "question": "How big is my yearly training allowance?",
+  "expected": "32",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t16",
+  "split": "test",
+  "question": "Can I post pictures of the warehouse on Instagram?",
+  "expected": "43",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t17",
+  "split": "test",
+  "question": "How long does a written warning stay on file?",
+  "expected": "38",
+  "kind": "direct"
+ },
+ {
+  "id": "t18",
+  "split": "test",
+  "question": "What are the core hours in the office?",
+  "expected": "2",
+  "kind": "direct"
+ },
+ {
+  "id": "t19",
+  "split": "test",
+  "question": "Can I use the company van to move house?",
+  "expected": "24",
+  "kind": "paraphrase"
+ },
+ {
+  "id": "t20",
+  "split": "test",
+  "question": "Is there a retirement savings scheme?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t21",
+  "split": "test",
+  "question": "How many employees does the company have in Kosovo?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t22",
+  "split": "test",
+  "question": "What is the maternity leave policy in Germany?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t23",
+  "split": "test",
+  "question": "Who is the CEO of Drini Logistics?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t24",
+  "split": "test",
+  "question": "What is the wifi password?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t25",
+  "split": "test",
+  "question": "Does the company offer childcare vouchers?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t26",
+  "split": "test",
+  "question": "What is the weather in Tirana tomorrow?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ },
+ {
+  "id": "t27",
+  "split": "test",
+  "question": "How do I apply for a mortgage through the company?",
+  "expected": "abstain",
+  "kind": "out-of-scope"
+ }
+]

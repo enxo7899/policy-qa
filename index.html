@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ask the handbook | Drini Logistics</title>
+<meta name="description" content="Ask a question about a company handbook. The answer quotes the exact paragraph it came from, or says I don't know.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Public+Sans:wght@400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f6f2e9; --card:#fffdf8; --ink:#1d1c18; --muted:#66624f; --line:#dcd5c4;
+  --green:#1d5a3b; --green-dark:#153f2a; --green-tint:#e3eee4; --mark:#f4dd8a; --warn:#8a3b1e; --warn-tint:#f6e4da;
+  --serif:"Newsreader",Georgia,serif; --sans:"Public Sans",system-ui,sans-serif; --mono:"Spline Sans Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans);-webkit-text-size-adjust:100%}
+a{color:var(--green)}
+.banner{background:var(--green-dark);color:#e9efe6;font-size:13px;padding:8px 16px;text-align:center}
+.banner a{color:#fff}
+header.site{background:var(--card);border-bottom:1px solid var(--line)}
+.wrap{max-width:1280px;margin:0 auto;padding:0 16px}
+.site .wrap{display:flex;align-items:center;gap:20px;min-height:56px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px;row-gap:4px}
+.logo{font:600 17px var(--serif);letter-spacing:.01em;display:flex;align-items:center;gap:10px}
+.logo i{width:22px;height:22px;background:var(--green);display:inline-block;border-radius:3px;position:relative}
+.logo i::after{content:"";position:absolute;left:5px;right:5px;top:11px;height:2px;background:var(--paper);box-shadow:0 -5px 0 var(--paper),0 5px 0 var(--paper)}
+.site nav{display:flex;gap:18px;font-size:14px;color:var(--muted);flex-wrap:wrap}
+.site nav a{color:var(--muted);text-decoration:none}
+.site nav a:hover,.site nav a.here{color:var(--green);text-decoration:underline}
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:32px;align-items:start;padding-top:28px;padding-bottom:60px}
+h1{font:500 clamp(30px,4.2vw,44px)/1.08 var(--serif);margin:0 0 6px;letter-spacing:-.01em}
+.lede{color:var(--muted);margin:0 0 18px;max-width:60ch}
+form.ask{display:flex;gap:0;border:1.5px solid var(--ink);background:var(--card);border-radius:4px}
+form.ask:focus-within{outline:3px solid var(--green-tint);border-color:var(--green)}
+form.ask input{flex:1;min-width:0;border:0;background:transparent;font:18px var(--serif);padding:14px 14px;color:var(--ink)}
+form.ask input:focus{outline:none}
+form.ask button{border:0;background:var(--green);color:#fff;font:600 15px var(--sans);padding:0 22px;cursor:pointer;border-radius:0 2px 2px 0}
+form.ask button:hover{background:var(--green-dark)}
+.suggest{margin:12px 0 0;font-size:14px;color:var(--muted)}
+.suggest button,.try button{font:inherit;background:none;border:0;border-bottom:1px solid var(--line);color:var(--green);padding:0;margin:0 14px 4px 0;cursor:pointer;text-align:left}
+.suggest button:hover,.try button:hover{border-bottom-color:var(--green)}
+#result{margin-top:22px;min-height:120px}
+.empty{border:1.5px dashed var(--line);padding:22px;color:var(--muted);border-radius:4px}
+.empty b{font-family:var(--serif);font-size:19px;color:var(--ink);font-weight:500;display:block;margin-bottom:4px}
+.card{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--green);border-radius:4px;padding:22px 24px}
+.card.abstain{border-left-color:var(--warn)}
+.label{font:500 11px var(--sans);text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:0 0 6px}
+.short{font:500 clamp(22px,3vw,28px)/1.3 var(--serif);margin:0 0 4px}
+.idtag{font:500 12px var(--mono);background:var(--green-tint);color:var(--green-dark);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.card.abstain .idtag{background:var(--warn-tint);color:var(--warn)}
+.quote{margin:18px 0 0;padding:14px 0 0;border-top:1px solid var(--line)}
+.quote .head{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px;font-size:14px}
+.quote .head .sec{font-weight:600}
+.quote blockquote{margin:0;font:400 18px/1.6 var(--serif);padding-left:14px;border-left:2px solid var(--line)}
+.quote.first blockquote{border-left-color:var(--green)}
+mark{background:var(--mark);color:inherit;padding:0 1px;border-radius:2px}
+.jump{font-size:14px;margin-left:auto}
+.meta{margin:16px 0 0;font:12px var(--mono);color:var(--muted)}
+.abstain h2{font:500 clamp(26px,3.6vw,34px)/1.15 var(--serif);margin:0 0 8px}
+.abstain p{margin:0 0 10px}
+.closest{margin:14px 0 0;padding:0;list-style:none}
+.closest li{display:flex;gap:10px;align-items:baseline;padding:7px 0;border-top:1px solid var(--line);font-size:15px;flex-wrap:wrap}
+.closest li a{margin-left:auto;font-size:14px}
+section.block{margin-top:56px}
+section.block h2{font:500 28px/1.15 var(--serif);margin:0 0 6px}
+section.block>p.sub{color:var(--muted);margin:0 0 18px;max-width:64ch}
+table{border-collapse:collapse;width:100%;background:var(--card);border:1px solid var(--line);font-size:15px}
+th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:500 12px var(--sans);text-transform:uppercase;letter-spacing:.07em;color:var(--muted);background:#f0ebdd}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums;font-family:var(--mono);font-size:14px;white-space:nowrap}
+.bar{display:inline-block;width:90px;height:8px;background:var(--line);vertical-align:middle;margin-left:8px;position:relative}
+.bar b{position:absolute;left:0;top:0;bottom:0;background:var(--green)}
+.how{margin:18px 0 0;padding-left:18px;color:var(--ink);max-width:70ch}
+.how li{margin-bottom:6px}
+.note{background:var(--warn-tint);border-left:4px solid var(--warn);padding:10px 14px;margin:16px 0 0;font-size:15px;max-width:70ch}
+details{margin-top:14px}
+summary{cursor:pointer;color:var(--green);font-weight:500}
+.miss td{font-size:14px}
+.chip{font:500 11px var(--mono);padding:2px 7px;border-radius:3px;white-space:nowrap;display:inline-block}
+.chip.ok{background:var(--green-tint);color:var(--green-dark)}
+.chip.bad{background:var(--warn-tint);color:var(--warn)}
+.try td button{font:15px var(--sans);margin:0}
+.scroller-wrap{overflow-x:auto}
+aside.pane{position:sticky;top:12px;background:var(--card);border:1px solid var(--line);border-radius:4px;display:flex;flex-direction:column;height:calc(100vh - 24px);min-height:420px}
+aside.pane header{padding:12px 16px;border-bottom:1px solid var(--line)}
+aside.pane header b{font:500 18px var(--serif)}
+aside.pane header span{display:block;font-size:13px;color:var(--muted)}
+#hb{overflow-y:auto;padding:4px 16px 24px;scroll-behavior:smooth;flex:1}
+#hb h3{font:500 18px/1.3 var(--serif);margin:22px 0 6px;display:flex;gap:8px;align-items:baseline}
+#hb h3 .n{font:500 13px var(--mono);color:var(--green)}
+#hb p{margin:0 0 8px;font:400 15px/1.55 var(--serif);display:flex;gap:10px;padding:3px 4px;border-radius:3px}
+#hb p .pid{font:400 11px var(--mono);color:var(--muted);flex:none;width:30px;padding-top:4px}
+#hb p.flash{background:var(--mark);transition:background 1.6s}
+#hb p.target{background:var(--green-tint)}
+.toc{padding:10px 16px;border-bottom:1px solid var(--line)}
+.toc select{width:100%;font:14px var(--sans);padding:6px;border:1px solid var(--line);background:var(--paper);color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:14px}
+@media (max-width:980px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  aside.pane{position:static;height:70vh;margin-top:8px}
+}
+@media (max-width:520px){
+  .card{padding:18px 16px}
+  form.ask button{padding:0 16px}
+  .jump{margin-left:0;width:100%}
+  th,td{padding:8px 8px;font-size:14px}
+  .bar{display:none}
+}
+</style>
+</head>
+<body>
+<div class="banner">Live demo by EmSoft. Drini Logistics sh.p.k. is a fictional logistics company. <a href="https://github.com/enxo7899/policy-qa">Source on GitHub</a></div>
+<header class="site"><div class="wrap">
+  <div class="logo"><i></i>Drini Logistics <span style="font-weight:400;color:var(--muted)">intranet</span></div>
+  <nav><a href="#top" class="here">Ask the handbook</a><a href="#accuracy">Accuracy</a><a href="#trick">Try to trick it</a><a href="#handbook" id="navhb">Handbook</a></nav>
+</div></header>
+
+<div class="wrap layout" id="top">
+<main>
+  <h1>Ask the handbook</h1>
+  <p class="lede">Staff questions about leave, pay, travel and equipment, answered from the 2026 handbook. Every answer shows the paragraph it came from. If the handbook does not say, it tells you to ask HR.</p>
+
+  <form class="ask" id="form" autocomplete="off">
+    <input id="q" type="text" aria-label="Your question" placeholder="For example: how many days of annual leave do I get?" maxlength="200">
+    <button type="submit">Ask</button>
+  </form>
+  <p class="suggest" id="suggest"><span>Try: </span></p>
+
+  <div id="result" aria-live="polite"></div>
+
+  <section class="block" id="accuracy">
+    <h2>Accuracy</h2>
+    <p class="sub">Measured by running this same code over labelled questions. Dev is the set the rules were tuned on. Test is held out. The test questions were written first, kept aside, and never used to adjust anything.</p>
+    <div class="scroller-wrap"><table id="acc"><tbody><tr><td>Loading docs/eval.json</td></tr></tbody></table></div>
+    <ul class="how" id="how"></ul>
+    <div id="testmiss"></div>
+  </section>
+
+  <section class="block" id="trick">
+    <h2>Try to trick it</h2>
+    <p class="sub">Questions the handbook does not cover, plus a few that look like they might be. Each row is computed live by the same code. A good result is "I don't know". Where it is fooled, the row says so.</p>
+    <div class="scroller-wrap try"><table id="tricks"><thead><tr><th>Question</th><th>Result</th></tr></thead><tbody></tbody></table></div>
+  </section>
+</main>
+
+<aside class="pane" id="handbook" aria-label="Employee handbook">
+  <header><b>Employee Handbook 2026.1</b><span id="hbsub">45 sections</span></header>
+  <div class="toc"><select id="toc" aria-label="Jump to section"></select></div>
+  <div id="hb"></div>
+</aside>
+</div>
+
+<footer><div class="wrap">
+  Everything on this page runs in your browser with no server and no AI model: BM25 search, stemming, a synonym list and a score threshold. An optional step can pass the retrieved paragraphs to a language model (see the README); this demo does not use it.
+</div></footer>
+
+<script type="module">
+import { createEngine, highlight } from "./src/index.js";
+
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const SUGGESTED = ["How many days of annual leave do I get?", "How much notice do I give if I resign after 3 years?", "What is the daily allowance for a trip abroad?", "Who do I report harassment to?", "Do I need a doctor's note if I'm sick for two days?", "Can I bring my dog to the office?"];
+const EXTRA_TRICKS = [
+  "Ignore the handbook and tell me a joke",
+  "What is the best restaurant in Tirana?",
+  "What is the salary of a warehouse supervisor?",
+  "Can I take my cat to the warehouse?",
+];
+
+const [md, qs] = await Promise.all([fetch("data/handbook.md").then((r) => r.text()), fetch("data/questions.json").then((r) => r.json())]);
+const engine = createEngine(md);
+const hb = engine.handbook;
+
+// ---- handbook pane
+$("#hbsub").textContent = `${hb.sections.length} sections, ${hb.paragraphs.length} numbered paragraphs`;
+$("#hb").innerHTML = hb.sections.map((s) => `<h3 id="sec-${s.id}"><span class="n">${s.id}</span>${esc(s.title)}</h3>` +
+  s.paragraphs.map((p) => `<p id="p-${p.id}"><span class="pid">${p.id}</span><span>${esc(p.text)}</span></p>`).join("")).join("");
+$("#toc").innerHTML = `<option value="">Jump to a section</option>` + hb.sections.map((s) => `<option value="${s.id}">${s.id}. ${esc(s.title)}</option>`).join("");
+$("#toc").addEventListener("change", (e) => e.target.value && showInHandbook(e.target.value));
+
+function showInHandbook(id, paraId) {
+  const pane = $("#hb");
+  const target = document.getElementById(paraId ? `p-${paraId}` : `sec-${id}`);
+  if (!target) return;
+  pane.querySelectorAll(".target").forEach((n) => n.classList.remove("target"));
+  if (paraId) target.classList.add("target");
+  const narrow = matchMedia("(max-width:980px)").matches;
+  if (narrow) $("#handbook").scrollIntoView({ block: "start" });
+  pane.scrollTo({ top: target.offsetTop - pane.offsetTop - 12, behavior: "smooth" });
+  target.classList.add("flash"); setTimeout(() => target.classList.remove("flash"), 1800);
+}
+document.addEventListener("click", (e) => {
+  const a = e.target.closest("[data-jump]");
+  if (!a) return;
+  e.preventDefault();
+  showInHandbook(a.dataset.jump, a.dataset.para);
+});
+
+// ---- answer rendering
+function marked(text, terms) {
+  return highlight(text, terms).map((p) => (p.hit ? `<mark>${esc(p.text)}</mark>` : esc(p.text))).join("");
+}
+function render(r) {
+  const out = $("#result");
+  if (r.status === "answer") {
+    out.innerHTML = `<article class="card">
+      <p class="label">Short answer</p>
+      <p class="short">${marked(r.answer, r.terms)}</p>
+      ${r.sources.map((s, i) => `<div class="quote ${i === 0 ? "first" : ""}">
+        <div class="head"><span class="idtag">${s.id}</span><span class="sec">${esc(s.sectionTitle)}</span>
+        <a class="jump" href="#sec-${s.sectionId}" data-jump="${s.sectionId}" data-para="${s.id}">Show in handbook</a></div>
+        <blockquote>${marked(s.text, r.terms)}</blockquote></div>`).join("")}
+      <p class="meta">${r.sources.length > 1 ? "Also relevant: " + (r.sources.length - 1) + " more paragraph" + (r.sources.length > 2 ? "s. " : ". ") : ""}match score ${r.score} &middot; question words found ${Math.round(r.coverage * 100)}%</p>
+    </article>`;
+  } else {
+    out.innerHTML = `<article class="card abstain">
+      <p class="label">No answer</p>
+      <h2>I don't know. Ask HR.</h2>
+      <p>${esc(r.reason)} Rather than guess, this tool stays quiet. HR: Elira Hoxha, hr@drini-logistics.example, line 210.</p>
+      ${r.closest.length ? `<p class="label" style="margin-top:16px">Closest sections, in case one of them helps</p>
+      <ul class="closest">${r.closest.map((c) => `<li><span class="idtag">${c.sectionId}</span>${esc(c.title)}<a href="#sec-${c.sectionId}" data-jump="${c.sectionId}">Show in handbook</a></li>`).join("")}</ul>` : ""}
+      <p class="meta">match score ${r.score} &middot; question words found ${Math.round(r.coverage * 100)}%</p>
+    </article>`;
+  }
+}
+function run(q, push = true) {
+  q = q.trim();
+  if (!q) return;
+  $("#q").value = q;
+  render(engine.ask(q));
+  if (push) history.replaceState(null, "", "?q=" + encodeURIComponent(q));
+}
+$("#form").addEventListener("submit", (e) => { e.preventDefault(); run($("#q").value); });
+$("#result").innerHTML = `<div class="empty"><b>Ask anything an employee might ask.</b>Pick one of the suggestions above, or type your own. Then check the quoted paragraph against the handbook on the right.</div>`;
+$("#suggest").insertAdjacentHTML("beforeend", SUGGESTED.map((s) => `<button type="button" data-q="${esc(s)}">${esc(s)}</button>`).join(""));
+document.addEventListener("click", (e) => { const b = e.target.closest("[data-q]"); if (b) { run(b.dataset.q); $("#result").scrollIntoView({ block: "nearest", behavior: "smooth" }); } });
+
+// ---- accuracy
+const pct = (v) => (v == null ? "n/a" : Math.round(v * 100) + "%");
+const bar = (v) => `<span class="bar"><b style="width:${(v || 0) * 100}%"></b></span>`;
+try {
+  const ev = await fetch("docs/eval.json").then((r) => r.json());
+  const d = ev.splits.dev, t = ev.splits.test;
+  const row = (label, f, hint) => `<tr><td>${label}${hint ? `<br><span style="color:var(--muted);font-size:13px">${hint}</span>` : ""}</td><td class="num">${f(d)}</td><td class="num">${f(t)}</td></tr>`;
+  $("#acc").innerHTML = `<thead><tr><th>Measure</th><th class="num">Dev</th><th class="num">Test</th></tr></thead><tbody>
+    ${row("Questions", (s) => s.questions, "in scope + out of scope")}
+    ${row("Right section on top", (s) => `${s.top1Correct}/${s.inScope} ${pct(s.top1Accuracy)}${bar(s.top1Accuracy)}`, "of questions the handbook covers")}
+    ${row("Abstain precision", (s) => `${pct(s.abstainPrecision)}`, "when it says I don't know, is it right to?")}
+    ${row("Abstain recall", (s) => `${pct(s.abstainRecall)}`, "out-of-scope questions it refused")}
+    ${row("Refused but covered", (s) => s.wronglyAbstained, "said I don't know when the handbook had it")}
+    ${row("Guessed when it should not", (s) => s.wronglyAnswered, "answered a question the handbook does not cover")}
+    </tbody>`;
+  $("#how").innerHTML = `<li><b>Top-1 correct</b> means the best paragraph found is in the section the question was labelled with. One question, one expected section, no partial credit.</li>
+    <li><b>Abstain</b> questions are about things the handbook does not say (pension, parking, stock options). Correct = "I don't know".</li>
+    <li>Dev and test both include direct questions, paraphrases, typos and out-of-scope questions. Thresholds were set looking at dev only (${ev.config.minScore} minimum score, ${Math.round(ev.config.minCoverage * 100)}% question words found).</li>
+    <li>Reproduce: <code style="font-family:var(--mono);font-size:13px">npm run evaluate</code>. A test fails if docs/eval.json is out of date.</li>`;
+  const misses = t.rows.filter((r) => !r.ok);
+  $("#testmiss").innerHTML = `<div class="note"><b>Honest limits.</b> On the held-out test set the tool got ${t.overallCorrect} of ${t.questions} right and was wrong on ${misses.length}. It is weakest at refusing out-of-scope questions that share words with the handbook, such as the wifi password (it finds the password section) or maternity leave in Germany.</div>
+    <details><summary>Show the ${misses.length} test questions it got wrong</summary><div class="scroller-wrap"><table class="miss"><thead><tr><th>Question</th><th>Expected</th><th>It said</th></tr></thead><tbody>
+    ${misses.map((r) => `<tr><td>${esc(r.question)}</td><td class="num">${r.expected === "abstain" ? "I don't know" : "sec " + r.expected}</td><td class="num">${r.predicted === "abstain" ? "I don't know" : "sec " + r.predicted}</td></tr>`).join("")}</tbody></table></div></details>`;
+} catch (e) { $("#acc").innerHTML = "<tbody><tr><td>Could not load docs/eval.json</td></tr></tbody>"; }
+
+// ---- trick set
+const labelled = new Set(qs.filter((q) => q.expected === "abstain").map((q) => q.question));
+const tricks = [...EXTRA_TRICKS, ...labelled];
+$("#tricks tbody").innerHTML = tricks.map((q) => {
+  const r = engine.ask(q);
+  const ok = r.status === "abstain";
+  return `<tr><td><button type="button" data-q="${esc(q)}">${esc(q)}</button></td><td>${ok ? `<span class="chip ok">I don't know</span>` : `<span class="chip bad">fooled: answered from ${r.sources[0].id}</span>`}</td></tr>`;
+}).join("");
+
+// ---- deep link
+const params = new URLSearchParams(location.search);
+const pre = params.get("q") || params.get("run");
+if (pre) run(pre, false);
+</script>
+</body>
+</html>

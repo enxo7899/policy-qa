@@ -1,0 +1,1111 @@
+{
+ "generatedBy": "node scripts/evaluate.mjs",
+ "inputsHash": "6cf5528321ed6d01",
+ "config": {
+  "minScore": 4.5,
+  "minCoverage": 0.6,
+  "minMargin": 0.005,
+  "strongScore": 16,
+  "coverageWaiverScore": 8.2,
+  "unknownPenalty": 0.3,
+  "extraSources": 2
+ },
+ "splits": {
+  "dev": {
+   "questions": 36,
+   "inScope": 28,
+   "outOfScope": 8,
+   "top1Correct": 26,
+   "top1Accuracy": 0.929,
+   "answeredCorrectly": 26,
+   "precisionOfAnswers": 0.867,
+   "abstainPrecision": 1,
+   "abstainRecall": 0.75,
+   "wronglyAbstained": 0,
+   "wronglyAnswered": 2,
+   "overallCorrect": 32,
+   "rows": [
+    {
+     "id": "d1",
+     "question": "How many days of annual leave do I get?",
+     "kind": "direct",
+     "expected": "4",
+     "predicted": "4",
+     "status": "answer",
+     "ok": true,
+     "score": 9.72,
+     "coverage": 1,
+     "margin": 0.03,
+     "closest": [
+      "4",
+      "5",
+      "7"
+     ]
+    },
+    {
+     "id": "d2",
+     "question": "How long is my probation?",
+     "kind": "direct",
+     "expected": "14",
+     "predicted": "14",
+     "status": "answer",
+     "ok": true,
+     "score": 5.7,
+     "coverage": 1,
+     "margin": 0.43,
+     "closest": [
+      "14",
+      "13",
+      "30"
+     ]
+    },
+    {
+     "id": "d3",
+     "question": "What is the daily allowance for a business trip to Germany?",
+     "kind": "direct",
+     "expected": "26",
+     "predicted": "26",
+     "status": "answer",
+     "ok": true,
+     "score": 18.25,
+     "coverage": 0.91,
+     "margin": 0.3,
+     "closest": [
+      "26",
+      "25",
+      "42"
+     ]
+    },
+    {
+     "id": "d4",
+     "question": "Who do I report harassment to?",
+     "kind": "direct",
+     "expected": "36",
+     "predicted": "36",
+     "status": "answer",
+     "ok": true,
+     "score": 14.42,
+     "coverage": 1,
+     "margin": 0.72,
+     "closest": [
+      "36",
+      "37",
+      "40"
+     ]
+    },
+    {
+     "id": "d5",
+     "question": "How much notice do I give if I resign after 3 years?",
+     "kind": "direct",
+     "expected": "15",
+     "predicted": "15",
+     "status": "answer",
+     "ok": true,
+     "score": 19.64,
+     "coverage": 0.85,
+     "margin": 0.59,
+     "closest": [
+      "15",
+      "16",
+      "5"
+     ]
+    },
+    {
+     "id": "d6",
+     "question": "Do I need a doctor's note if I am sick for two days?",
+     "kind": "direct",
+     "expected": "7",
+     "predicted": "7",
+     "status": "answer",
+     "ok": true,
+     "score": 22.06,
+     "coverage": 0.81,
+     "margin": 0.6,
+     "closest": [
+      "7",
+      "8",
+      "9"
+     ]
+    },
+    {
+     "id": "d7",
+     "question": "How much is overtime paid on a Sunday?",
+     "kind": "direct",
+     "expected": "18",
+     "predicted": "18",
+     "status": "answer",
+     "ok": true,
+     "score": 18,
+     "coverage": 1,
+     "margin": 0.41,
+     "closest": [
+      "18",
+      "19",
+      "3"
+     ]
+    },
+    {
+     "id": "d8",
+     "question": "Can I work from home?",
+     "kind": "direct",
+     "expected": "20",
+     "predicted": "20",
+     "status": "answer",
+     "ok": true,
+     "score": 8.14,
+     "coverage": 1,
+     "margin": 0.01,
+     "closest": [
+      "20",
+      "21",
+      "24"
+     ]
+    },
+    {
+     "id": "d9",
+     "question": "How much is the home office allowance?",
+     "kind": "direct",
+     "expected": "21",
+     "predicted": "21",
+     "status": "answer",
+     "ok": true,
+     "score": 13.64,
+     "coverage": 1,
+     "margin": 0.23,
+     "closest": [
+      "21",
+      "20",
+      "26"
+     ]
+    },
+    {
+     "id": "d10",
+     "question": "How long do I have to submit an expense claim?",
+     "kind": "direct",
+     "expected": "27",
+     "predicted": "27",
+     "status": "answer",
+     "ok": true,
+     "score": 19.62,
+     "coverage": 1,
+     "margin": 0.7,
+     "closest": [
+      "27",
+      "28",
+      "45"
+     ]
+    },
+    {
+     "id": "d11",
+     "question": "How many days off do new fathers get?",
+     "kind": "paraphrase",
+     "expected": "11",
+     "predicted": "11",
+     "status": "answer",
+     "ok": true,
+     "score": 8.79,
+     "coverage": 0.74,
+     "margin": 0.25,
+     "closest": [
+      "11",
+      "18",
+      "6"
+     ]
+    },
+    {
+     "id": "d12",
+     "question": "When is salary paid?",
+     "kind": "direct",
+     "expected": "29",
+     "predicted": "29",
+     "status": "answer",
+     "ok": true,
+     "score": 8.24,
+     "coverage": 1,
+     "margin": 0.47,
+     "closest": [
+      "29",
+      "11",
+      "4"
+     ]
+    },
+    {
+     "id": "d13",
+     "question": "Who gets a company mobile phone?",
+     "kind": "direct",
+     "expected": "23",
+     "predicted": "23",
+     "status": "answer",
+     "ok": true,
+     "score": 16.25,
+     "coverage": 0.7,
+     "margin": 0.67,
+     "closest": [
+      "23",
+      "41",
+      "31"
+     ]
+    },
+    {
+     "id": "d14",
+     "question": "How many leave days can I carry over to next year?",
+     "kind": "direct",
+     "expected": "6",
+     "predicted": "6",
+     "status": "answer",
+     "ok": true,
+     "score": 17.12,
+     "coverage": 1,
+     "margin": 0.51,
+     "closest": [
+      "6",
+      "4",
+      "17"
+     ]
+    },
+    {
+     "id": "d15",
+     "question": "What is the maximum hotel price per night in the EU?",
+     "kind": "direct",
+     "expected": "25",
+     "predicted": "25",
+     "status": "answer",
+     "ok": true,
+     "score": 17.5,
+     "coverage": 0.63,
+     "margin": 0.55,
+     "closest": [
+      "25",
+      "26",
+      "19"
+     ]
+    },
+    {
+     "id": "d16",
+     "question": "What password length is required?",
+     "kind": "direct",
+     "expected": "34",
+     "predicted": "34",
+     "status": "answer",
+     "ok": true,
+     "score": 9.96,
+     "coverage": 0.63,
+     "margin": 0.52,
+     "closest": [
+      "34",
+      "15",
+      "33"
+     ]
+    },
+    {
+     "id": "d17",
+     "question": "What happens if I lose my laptop?",
+     "kind": "direct",
+     "expected": "22",
+     "predicted": "22",
+     "status": "answer",
+     "ok": true,
+     "score": 11.26,
+     "coverage": 0.85,
+     "margin": 0.66,
+     "closest": [
+      "22",
+      "21",
+      "17"
+     ]
+    },
+    {
+     "id": "d18",
+     "question": "How much is the referral bonus?",
+     "kind": "direct",
+     "expected": "44",
+     "predicted": "44",
+     "status": "answer",
+     "ok": true,
+     "score": 15.7,
+     "coverage": 1,
+     "margin": 0.63,
+     "closest": [
+      "44",
+      "29",
+      "31"
+     ]
+    },
+    {
+     "id": "d19",
+     "question": "How many days off when my father dies?",
+     "kind": "paraphrase",
+     "expected": "12",
+     "predicted": "12",
+     "status": "answer",
+     "ok": true,
+     "score": 8.83,
+     "coverage": 0.74,
+     "margin": 0.2,
+     "closest": [
+      "12",
+      "11",
+      "18"
+     ]
+    },
+    {
+     "id": "d20",
+     "question": "Can I get a salary advance?",
+     "kind": "direct",
+     "expected": "30",
+     "predicted": "30",
+     "status": "answer",
+     "ok": true,
+     "score": 10.78,
+     "coverage": 1,
+     "margin": 0.47,
+     "closest": [
+      "30",
+      "29",
+      "26"
+     ]
+    },
+    {
+     "id": "d21",
+     "question": "hw many holliday days do i get",
+     "kind": "typo",
+     "expected": "4",
+     "predicted": "3",
+     "status": "answer",
+     "ok": false,
+     "score": 6.1,
+     "coverage": 0.74,
+     "margin": 0.25,
+     "closest": [
+      "3",
+      "4",
+      "18"
+     ]
+    },
+    {
+     "id": "d22",
+     "question": "probbation period lenght",
+     "kind": "typo",
+     "expected": "14",
+     "predicted": "14",
+     "status": "answer",
+     "ok": true,
+     "score": 7.76,
+     "coverage": 0.79,
+     "margin": 0.14,
+     "closest": [
+      "14",
+      "15",
+      "16"
+     ]
+    },
+    {
+     "id": "d23",
+     "question": "What do I get paid if I stay home ill?",
+     "kind": "paraphrase",
+     "expected": "8",
+     "predicted": "7",
+     "status": "answer",
+     "ok": false,
+     "score": 8.55,
+     "coverage": 0.3,
+     "margin": 0.04,
+     "closest": [
+      "7",
+      "21",
+      "20"
+     ]
+    },
+    {
+     "id": "d24",
+     "question": "How do I tell the company that customer data was leaked?",
+     "kind": "paraphrase",
+     "expected": "33",
+     "predicted": "33",
+     "status": "answer",
+     "ok": true,
+     "score": 7.94,
+     "coverage": 0.77,
+     "margin": 0.25,
+     "closest": [
+      "33",
+      "35",
+      "38"
+     ]
+    },
+    {
+     "id": "d25",
+     "question": "Can the warehouse refuse my vacation in December?",
+     "kind": "paraphrase",
+     "expected": "5",
+     "predicted": "5",
+     "status": "answer",
+     "ok": true,
+     "score": 11.81,
+     "coverage": 1,
+     "margin": 0.54,
+     "closest": [
+      "5",
+      "6",
+      "29"
+     ]
+    },
+    {
+     "id": "d26",
+     "question": "Who pays for my steel toe boots?",
+     "kind": "paraphrase",
+     "expected": "39",
+     "predicted": "39",
+     "status": "answer",
+     "ok": true,
+     "score": 8.75,
+     "coverage": 0.49,
+     "margin": 0.63,
+     "closest": [
+      "39",
+      "8",
+      "17"
+     ]
+    },
+    {
+     "id": "d27",
+     "question": "What is the severance if my role is made redundant?",
+     "kind": "paraphrase",
+     "expected": "16",
+     "predicted": "16",
+     "status": "answer",
+     "ok": true,
+     "score": 14.71,
+     "coverage": 1,
+     "margin": 0.68,
+     "closest": [
+      "16",
+      "44",
+      "20"
+     ]
+    },
+    {
+     "id": "d28",
+     "question": "Is there a night shift premium?",
+     "kind": "paraphrase",
+     "expected": "19",
+     "predicted": "19",
+     "status": "answer",
+     "ok": true,
+     "score": 10.28,
+     "coverage": 0.82,
+     "margin": 0.57,
+     "closest": [
+      "19",
+      "2",
+      "25"
+     ]
+    },
+    {
+     "id": "d29",
+     "question": "What is the company pension plan contribution?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 5.96,
+     "coverage": 0.56,
+     "margin": 0.19,
+     "closest": [
+      "13",
+      "23",
+      "25"
+     ]
+    },
+    {
+     "id": "d30",
+     "question": "Do we get free lunch in the canteen?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 4.19,
+     "coverage": 0.47,
+     "margin": 0.1,
+     "closest": [
+      "39",
+      "2",
+      "28"
+     ]
+    },
+    {
+     "id": "d31",
+     "question": "Can I bring my dog to the office?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 4.04,
+     "coverage": 0.5,
+     "margin": 0.07,
+     "closest": [
+      "38",
+      "7",
+      "10"
+     ]
+    },
+    {
+     "id": "d32",
+     "question": "What is the parking policy at the Tirana office?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 6.5,
+     "coverage": 0.53,
+     "margin": 0.38,
+     "closest": [
+      "1",
+      "24",
+      "25"
+     ]
+    },
+    {
+     "id": "d33",
+     "question": "How much is the health insurance cover for family members?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 7.73,
+     "coverage": 0.41,
+     "margin": 0.08,
+     "closest": [
+      "22",
+      "13",
+      "39"
+     ]
+    },
+    {
+     "id": "d34",
+     "question": "Does the company offer stock options?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "34",
+     "status": "answer",
+     "ok": false,
+     "score": 6.23,
+     "coverage": 0.88,
+     "margin": 0.3,
+     "closest": [
+      "34",
+      "18",
+      "8"
+     ]
+    },
+    {
+     "id": "d35",
+     "question": "What is the managing director's salary?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "30",
+     "status": "answer",
+     "ok": false,
+     "score": 7.23,
+     "coverage": 1,
+     "margin": 0.15,
+     "closest": [
+      "30",
+      "15",
+      "29"
+     ]
+    },
+    {
+     "id": "d36",
+     "question": "Is there a gym membership benefit?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 4.27,
+     "coverage": 0.58,
+     "margin": 0.13,
+     "closest": [
+      "9",
+      "8"
+     ]
+    }
+   ]
+  },
+  "test": {
+   "questions": 27,
+   "inScope": 19,
+   "outOfScope": 8,
+   "top1Correct": 17,
+   "top1Accuracy": 0.895,
+   "answeredCorrectly": 17,
+   "precisionOfAnswers": 0.773,
+   "abstainPrecision": 0.8,
+   "abstainRecall": 0.5,
+   "wronglyAbstained": 1,
+   "wronglyAnswered": 4,
+   "overallCorrect": 21,
+   "rows": [
+    {
+     "id": "t1",
+     "question": "How many vacation days do I get after ten years?",
+     "kind": "paraphrase",
+     "expected": "4",
+     "predicted": "15",
+     "status": "answer",
+     "ok": false,
+     "score": 9,
+     "coverage": 0.87,
+     "margin": 0.07,
+     "closest": [
+      "15",
+      "6",
+      "4"
+     ]
+    },
+    {
+     "id": "t2",
+     "question": "How early must I call in when I am sick?",
+     "kind": "paraphrase",
+     "expected": "7",
+     "predicted": "7",
+     "status": "answer",
+     "ok": true,
+     "score": 13.42,
+     "coverage": 0.62,
+     "margin": 0.35,
+     "closest": [
+      "7",
+      "8",
+      "2"
+     ]
+    },
+    {
+     "id": "t3",
+     "question": "What is the notice period for a manager who wants to quit?",
+     "kind": "direct",
+     "expected": "15",
+     "predicted": "15",
+     "status": "answer",
+     "ok": true,
+     "score": 13.29,
+     "coverage": 0.9,
+     "margin": 0.38,
+     "closest": [
+      "15",
+      "16",
+      "38"
+     ]
+    },
+    {
+     "id": "t4",
+     "question": "How much per diem for a one night trip inside Albania?",
+     "kind": "direct",
+     "expected": "26",
+     "predicted": "26",
+     "status": "answer",
+     "ok": true,
+     "score": 23.08,
+     "coverage": 0.63,
+     "margin": 0.58,
+     "closest": [
+      "26",
+      "25",
+      "28"
+     ]
+    },
+    {
+     "id": "t5",
+     "question": "What time do early shift workers start?",
+     "kind": "direct",
+     "expected": "2",
+     "predicted": "2",
+     "status": "answer",
+     "ok": true,
+     "score": 8.62,
+     "coverage": 0.4,
+     "margin": 0.3,
+     "closest": [
+      "2",
+      "7",
+      "19"
+     ]
+    },
+    {
+     "id": "t6",
+     "question": "Can I claim a taxi receipt a month later?",
+     "kind": "paraphrase",
+     "expected": "27",
+     "predicted": "27",
+     "status": "answer",
+     "ok": true,
+     "score": 15.28,
+     "coverage": 0.9,
+     "margin": 0.58,
+     "closest": [
+      "27",
+      "28",
+      "37"
+     ]
+    },
+    {
+     "id": "t7",
+     "question": "How long is maternity leave?",
+     "kind": "direct",
+     "expected": "10",
+     "predicted": "10",
+     "status": "answer",
+     "ok": true,
+     "score": 12.52,
+     "coverage": 1,
+     "margin": 0.45,
+     "closest": [
+      "10",
+      "11",
+      "8"
+     ]
+    },
+    {
+     "id": "t8",
+     "question": "Is there a limit on lifting heavy boxes?",
+     "kind": "paraphrase",
+     "expected": "39",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": false,
+     "score": 5.69,
+     "coverage": 0.27,
+     "margin": 0.12,
+     "closest": [
+      "40",
+      "39",
+      "28"
+     ]
+    },
+    {
+     "id": "t9",
+     "question": "What is the gift limit from a supplier?",
+     "kind": "direct",
+     "expected": "42",
+     "predicted": "42",
+     "status": "answer",
+     "ok": true,
+     "score": 9.71,
+     "coverage": 0.71,
+     "margin": 0.49,
+     "closest": [
+      "42",
+      "28",
+      "27"
+     ]
+    },
+    {
+     "id": "t10",
+     "question": "How do I report fraud anonymously?",
+     "kind": "direct",
+     "expected": "37",
+     "predicted": "37",
+     "status": "answer",
+     "ok": true,
+     "score": 16.71,
+     "coverage": 1,
+     "margin": 0.75,
+     "closest": [
+      "37",
+      "36",
+      "40"
+     ]
+    },
+    {
+     "id": "t11",
+     "question": "Who do I call after an accident at work?",
+     "kind": "paraphrase",
+     "expected": "40",
+     "predicted": "40",
+     "status": "answer",
+     "ok": true,
+     "score": 12.89,
+     "coverage": 0.7,
+     "margin": 0.67,
+     "closest": [
+      "40",
+      "7",
+      "20"
+     ]
+    },
+    {
+     "id": "t12",
+     "question": "What is the maximum overtime per year?",
+     "kind": "direct",
+     "expected": "18",
+     "predicted": "18",
+     "status": "answer",
+     "ok": true,
+     "score": 12.41,
+     "coverage": 0.7,
+     "margin": 0.47,
+     "closest": [
+      "18",
+      "6",
+      "3"
+     ]
+    },
+    {
+     "id": "t13",
+     "question": "can i work frm home",
+     "kind": "typo",
+     "expected": "20",
+     "predicted": "20",
+     "status": "answer",
+     "ok": true,
+     "score": 8.14,
+     "coverage": 0.77,
+     "margin": 0.01,
+     "closest": [
+      "20",
+      "21",
+      "24"
+     ]
+    },
+    {
+     "id": "t14",
+     "question": "how long is paternty leave",
+     "kind": "typo",
+     "expected": "11",
+     "predicted": "11",
+     "status": "answer",
+     "ok": true,
+     "score": 9.98,
+     "coverage": 1,
+     "margin": 0.7,
+     "closest": [
+      "11",
+      "4",
+      "13"
+     ]
+    },
+    {
+     "id": "t15",
+     "question": "How big is my yearly training allowance?",
+     "kind": "paraphrase",
+     "expected": "32",
+     "predicted": "32",
+     "status": "answer",
+     "ok": true,
+     "score": 13.82,
+     "coverage": 0.59,
+     "margin": 0.55,
+     "closest": [
+      "32",
+      "26",
+      "27"
+     ]
+    },
+    {
+     "id": "t16",
+     "question": "Can I post pictures of the warehouse on Instagram?",
+     "kind": "paraphrase",
+     "expected": "43",
+     "predicted": "43",
+     "status": "answer",
+     "ok": true,
+     "score": 9.6,
+     "coverage": 0.89,
+     "margin": 0.69,
+     "closest": [
+      "43",
+      "20",
+      "41"
+     ]
+    },
+    {
+     "id": "t17",
+     "question": "How long does a written warning stay on file?",
+     "kind": "direct",
+     "expected": "38",
+     "predicted": "38",
+     "status": "answer",
+     "ok": true,
+     "score": 24.06,
+     "coverage": 1,
+     "margin": 0.79,
+     "closest": [
+      "38",
+      "26",
+      "13"
+     ]
+    },
+    {
+     "id": "t18",
+     "question": "What are the core hours in the office?",
+     "kind": "direct",
+     "expected": "2",
+     "predicted": "2",
+     "status": "answer",
+     "ok": true,
+     "score": 10.55,
+     "coverage": 1,
+     "margin": 0.52,
+     "closest": [
+      "2",
+      "33",
+      "20"
+     ]
+    },
+    {
+     "id": "t19",
+     "question": "Can I use the company van to move house?",
+     "kind": "paraphrase",
+     "expected": "24",
+     "predicted": "24",
+     "status": "answer",
+     "ok": true,
+     "score": 10.88,
+     "coverage": 0.38,
+     "margin": 0.43,
+     "closest": [
+      "24",
+      "22",
+      "21"
+     ]
+    },
+    {
+     "id": "t20",
+     "question": "Is there a retirement savings scheme?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 0,
+     "coverage": 0,
+     "margin": 0,
+     "closest": []
+    },
+    {
+     "id": "t21",
+     "question": "How many employees does the company have in Kosovo?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "22",
+     "status": "answer",
+     "ok": false,
+     "score": 4.8,
+     "coverage": 0.69,
+     "margin": 0.11,
+     "closest": [
+      "22",
+      "24",
+      "23"
+     ]
+    },
+    {
+     "id": "t22",
+     "question": "What is the maternity leave policy in Germany?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "10",
+     "status": "answer",
+     "ok": false,
+     "score": 10.44,
+     "coverage": 0.75,
+     "margin": 0.45,
+     "closest": [
+      "10",
+      "11",
+      "8"
+     ]
+    },
+    {
+     "id": "t23",
+     "question": "Who is the CEO of Drini Logistics?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "45",
+     "status": "answer",
+     "ok": false,
+     "score": 7.24,
+     "coverage": 0.77,
+     "margin": 0.24,
+     "closest": [
+      "45",
+      "44",
+      "42"
+     ]
+    },
+    {
+     "id": "t24",
+     "question": "What is the wifi password?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "34",
+     "status": "answer",
+     "ok": false,
+     "score": 6.91,
+     "coverage": 0.71,
+     "margin": 1,
+     "closest": [
+      "34"
+     ]
+    },
+    {
+     "id": "t25",
+     "question": "Does the company offer childcare vouchers?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 4.36,
+     "coverage": 0.51,
+     "margin": 0.35,
+     "closest": [
+      "18",
+      "8",
+      "6"
+     ]
+    },
+    {
+     "id": "t26",
+     "question": "What is the weather in Tirana tomorrow?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 6.73,
+     "coverage": 0.45,
+     "margin": 0.38,
+     "closest": [
+      "12",
+      "1",
+      "25"
+     ]
+    },
+    {
+     "id": "t27",
+     "question": "How do I apply for a mortgage through the company?",
+     "kind": "out-of-scope",
+     "expected": "abstain",
+     "predicted": "abstain",
+     "status": "abstain",
+     "ok": true,
+     "score": 5.23,
+     "coverage": 0.45,
+     "margin": 0.04,
+     "closest": [
+      "22",
+      "23",
+      "33"
+     ]
+    }
+   ]
+  }
+ }
+}
